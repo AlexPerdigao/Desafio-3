@@ -1,0 +1,27 @@
+{
+"slider-layout#home1": {
+    "children": ["image#1", "image#2"],
+    "props": {
+        "margin": "top",
+        "showNavigationArrows": "desktopOnly",
+        "arrowSize": 15,
+        "arrowColor": "#cccccc",
+        "usePagination": true,
+        "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 }
+      }
+    },
+  
+
+    "image#1": {
+    "props": {
+      "src": "assets/BANNER-WOOD.png"
+    }
+  },
+
+    "image#2": {
+    "props": {
+      "src": "assets/image2.png"
+    }
+  }
+
+} 

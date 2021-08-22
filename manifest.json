@@ -1,11 +1,12 @@
 {
   "vendor": "hiringcoders2021",
-  "name": "desafio",
+  "name": "workspaced3",
   "version": "0.0.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "assets": "0.x"
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
@@ -13,13 +14,11 @@
   "dependencies": {
     "vtex.store": "2.x",
     "vtex.store-header": "2.x",
-    "vtex.product-summary": "2.x",
     "vtex.store-footer": "2.x",
     "vtex.store-components": "3.x",
     "vtex.styleguide": "9.x",
     "vtex.slider": "0.x",
     "vtex.carousel": "2.x",
-    "vtex.shelf": "1.x",
     "vtex.menu": "2.x",
     "vtex.minicart": "2.x",
     "vtex.product-details": "1.x",
@@ -44,7 +43,13 @@
     "vtex.iframe": "0.x",
     "vtex.breadcrumb": "1.x",
     "vtex.sticky-layout": "0.x",
-    "vtex.add-to-cart-button": "0.x"
+    "vtex.add-to-cart-button": "0.x",
+    "vtex.modal-layout": "0.x",
+    "vtex.product-price": "1.x",
+    "vtex.product-list": "0.x",
+    "vtex.product-summary": "2.x",
+    "vtex.shelf": "1.x",
+    "vtex.checkout-summary": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

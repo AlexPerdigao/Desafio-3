@@ -1,7 +1,22 @@
 {
   "store.search": {
     "blocks": [
-      
+      "flex-layout.col#spacerBar",
+      "search-bar",
+      "flex-layout.col#spacerBar"
     ]
+  },
+
+  "flex-layout.col#spacerBar": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "search-bar": {
+    "props": {
+      "placeholder": "BUSCAR",
+      "center": "center"
+    //"displayMode": "search-and-clear-buttons"
+    }
   }
 }

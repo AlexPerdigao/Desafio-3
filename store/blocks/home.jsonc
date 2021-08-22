@@ -1,15 +1,238 @@
 {
   "store.home": { 
-    "blocks": [
-      "rich-text"
-    ]
+    "blocks": [    
+      "tab-layout#header", 
+      "slider-layout#home1",
+      "search-result-layout.customQuery#home"
+   ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+                "orderByField": "OrderByBestDiscountDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "queryField": "UpMedal",
+                "mapField": "ft",
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+
+  "search-result-layout.customQuery#promocao": {
+    "props": {
+      "querySchema": {
+                "orderByField": "OrderByBestDiscountDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "queryField": "UpMedal",
+                "mapField": "ft",
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop",
+            "search-result-layout.mobile",
+            "search-not-found-layout"
+        ]
+    },
+    "search-result-layout.customQuery#desafios": {
+        "props": {
+            "querySchema": {
+                "queryField": "desafios",
+                "mapField": "category-2",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#corinthians": {
+        "props": {
+            "querySchema": {
+                "queryField": "Corinthians",
+                "mapField": "ft",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#palmeiras": {
+        "props": {
+            "querySchema": {
+                "queryField": "Palmeiras",
+                "mapField": "ft",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#guerreiros": {
+        "props": {
+            "querySchema": {
+                "queryField": "guerreiros",
+                "mapField": "category-3",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#signos": {
+        "props": {
+            "querySchema": {
+                "queryField": "signos",
+                "mapField": "category-3",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#medalhas": {
+        "props": {
+            "querySchema": {
+                "queryField": "medalhas",
+                "mapField": "category-2",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#camisetas": {
+        "props": {
+            "querySchema": {
+                "queryField": "camisetas",
+                "mapField": "category-2",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#bones": {
+        "props": {
+            "querySchema": {
+                "queryField": "bones",
+                "mapField": "category-2",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#oculos": {
+        "props": {
+            "querySchema": {
+                "queryField": "oculos",
+                "mapField": "category-2",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+    "search-result-layout.customQuery#combos": {
+        "props": {
+            "querySchema": {
+                "queryField": "Combo",
+                "mapField": "ft",
+                "orderByField": "OrderByNameASC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop"
+        ]
+    },
+
+
+
+"search-result-layout.desktop": {
+  "children": ["flex-layout.row#result"],
+  "props": {
+    "preventRouteChange": true
+  }
+},
+
+"flex-layout.row#result": {
+  "children":[
+    "search-content#home"
+  ]
+},
+"search-content#home": {
+  "blocks":[
+    "gallery", "not-found"
+  ]
+},
+
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "whole",
+          "component": "OneOrTwoLineSummary",
+          "itemsPerRow": 2
+        },
+        
+        {
+          "name": "many",
+          "component": "ManyByLineSummary",
+          "itemsPerRow": {
+            "desktop": 2,
+            "mobile": 1
+          }
+        }
+      ],
+      "OneOrTwoLineSummary": "product-summary.shelf",
+      "ManyByLineSummary": "product-summary.shelf"
     }
   }
 }
+
+      

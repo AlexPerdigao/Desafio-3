@@ -1,23 +1,32 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [      
+      "header-layout.desktop",
+      "header-layout.mobile"
+      
+    ]
   },
+
+  
   "header.full": {
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
+
   "header-layout.desktop": {
     "children": [
       "sticky-layout#desktop"
     ]
   },
+
   "sticky-layout#desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
     "children": ["flex-layout.row#desktop"]
   },
+
   "flex-layout.row#desktop": {
-    "props": {
+      "props": {
       "horizontalAlign": "center",
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
@@ -28,8 +37,8 @@
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
+//      "locale-switcher",
+//      "login",
       "minicart.v2"
     ]
   },
@@ -39,18 +48,22 @@
     }
   },
   "flex-layout.col#logo-desktop": {
-    "props": {
+      "props": {
       "verticalAlign": "middle"
     },
     "children": ["logo"]
   },
+
   "logo": {
-    "props": {
+      "props": {
       "title": "Logo",
-      "href": "./components/img/upmedal.png",
-      "width": "80"
+      "width": "80",
+      "src": "assets/upmedal.png"
     }
   },
+  
+      
+ 
   "header-layout.mobile": {
     "children": ["sticky-layout#mobile"]
   },
@@ -62,7 +75,7 @@
       "drawer",
       "logo",
       "flex-layout.col#spacer",
-      "login",
+//      "login",
       "minicart.v2"
     ],
     "props": {
@@ -74,5 +87,97 @@
   },
   "drawer": {
     "children": []
+  },
+
+  "tab-layout#header": {
+    "children": ["sticky-layout#menu"]
+    
+  },
+
+  "sticky-layout#menu":{
+    "props": {
+      "position": "fixed"
+    },
+    "children": ["tab-list#header"]
+  },
+
+
+  "tab-list#header": {
+    "children":[
+      "tab-list.item#header1",
+      "tab-list.item#header2",
+      "tab-list.item#header3",
+      "tab-list.item#header4",
+      "tab-list.item#header5",
+      "tab-list.item#header6"      
+    ]
+    
+  },
+
+  "tab-content#hearder": {
+    "children":[
+      "tab-content.item#palmeiras"
+    ]
+
+  },
+
+  "tab-content.item#palmeiras": {
+    "children": ["rich-text#palmeiras"],
+    "props": { 
+      "tabId": "palmeiras"
   }
+  
+},
+
+"rich-text#palmeiras": {
+  "parent":["search-result-layout.customQuery#palmeiras"]
+},
+
+
+
+  "tab-list.item#header1": {
+       "props": {
+         "tabId": "PROMOCAO",
+         "label": "PROMOÇÃO",
+         "defaultActiveTab": true
+       }
+       
+  },
+
+  "tab-list.item#header2": {
+     "props": {
+       "tabId": "palmeiras",
+       "label": "PALMEIRAS"
+    }
+  },
+
+  "tab-list.item#header3": {
+    "props": {
+      "tabId": "SAOPAULO",
+      "label": "SÃO PAULO"
+    }
+  },
+
+  "tab-list.item#header4": {
+    "props": {
+      "tabId": "SAOPAULO",
+      "label": "SÃO PAULO"
+    }
+  },
+
+  "tab-list.item#header5": {
+    "props": {
+      "tabId": "SAOPAULO",
+      "label": "SÃO PAULO"
+    }
+  },
+
+  "tab-list.item#header6": {
+    "props": {
+      "tabId": "SAOPAULO",
+      "label": "SÃO PAULO"
+    }
+  }
+
+  
 }

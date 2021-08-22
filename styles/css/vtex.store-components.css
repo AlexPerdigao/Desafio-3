@@ -1,0 +1,68 @@
+.imageElement {
+    width: 50%;
+    cursor: pointer;
+    display: flex;
+    overflow: 1;
+    position: relative;
+    margin: 25px;
+    border-radius: 20px;
+  }
+  
+  .searchBarContainer :global(.vtex-input-prefix__group) {
+   width: 770px;
+   background: #333333;
+   border-bottom-style:double;
+   border-color: chartreuse;
+   border-radius: 0px;
+   
+         
+}
+
+.searchBarIcon {
+  color: greenyellow;
+}
+
+.searchBarIcon--search {
+  background: #000000;
+}
+
+.autoCompleteOuterContainer {
+  background: #5e5e5e;
+}
+
+.searchBarContainer{
+  background: #333333;
+}
+
+.suffixWrapper {
+  background: #9e1b1b;
+}
+
+.searchBarContainer{
+  width: 770px;
+}
+.searchBarContainer :global(.vtex-input-prefix__group){
+  border:none;
+  border-radius: 0;
+  border-bottom: thin solid rgb(8, 240, 8);
+}
+
+.searchBarContainer :global(.vtex-styleguide-9-x-input){
+  background: #404040;
+  color:#303030;
+  }
+
+  .swiperPaginationClickable {
+    margin-top: 50px;
+   }
+
+   .carouselGaleryThumbs{
+     align-items: center;
+   }
+
+   .productBrand {
+     font-family: Montserrat;
+     color:rgb(8, 240, 8);
+     
+   }
+   
